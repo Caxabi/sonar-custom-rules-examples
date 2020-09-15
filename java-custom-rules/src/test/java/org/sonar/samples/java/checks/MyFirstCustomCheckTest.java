@@ -1,0 +1,18 @@
+package org.sonar.samples.java.checks;
+ 
+import org.junit.Test;
+import org.sonar.java.checks.verifier.JavaCheckVerifier;
+ 
+public class MyFirstCustomCheckTest {
+ 
+  @Test
+  public void test() {
+	  JavaCheckVerifier.verify("src/test/files/MyFirstCustomCheck.java", new MyFirstCustomCheck());
+//	  JavaCheckVerifier.newVerifier()
+//	     .onFile("src/test/files/MyFirstCustomCheck.java")
+//	     .withCheck(new MyFirstCustomCheck())
+//	     .verifyIssues();
+  }
+  
+}
+  
